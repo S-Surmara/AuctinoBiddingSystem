@@ -1,8 +1,8 @@
 package org.example.Enums;
 
 public enum AuctionStatus {
-    SCHEDULED,
-    STARTED,
-    COMPLETED,
-    CANCELLED
+    SCHEDULED,    // Created but not started
+    ACTIVE,       // Currently accepting bids
+    ENDED,        // Time expired
+    CANCELLED     // Cancelled by seller
 }

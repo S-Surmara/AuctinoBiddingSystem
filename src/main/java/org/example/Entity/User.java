@@ -8,8 +8,8 @@ public class User implements AuctionObserver {
     private String userId;
     private String name;
 
-    public User(String userId,String name){
-        this.userId = UUID.randomUUID().toString();
+    public User(String userId, String name){
+        this.userId = userId;  // FIXED: Use the passed userId, not generate new one
         this.name = name;
     }
 
@@ -23,6 +23,9 @@ public class User implements AuctionObserver {
 
     @Override
     public void notifyMe(Auction auction){
-        System.out.println("highest bid for Auctoin" + auction.getAuctionId() + "is: "+ auction.getHighestBidPrice());
+        if (auction.getHighestBid() != null) {
+            System.out.println("  [" + name + "] Highest bid for Auction " +
+                    auction.getName() + " is: ₹" + auction.getHighestBid().getPrice());
+        }
     }
 }

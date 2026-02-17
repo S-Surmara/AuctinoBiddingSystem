@@ -3,5 +3,7 @@ package org.example.Enums;
 public enum AuctionCategory {
     BIKE,
     CAR,
-    BOOKS
+    BOOKS,
+    ELECTRONICS,
+    FURNITURE
 }

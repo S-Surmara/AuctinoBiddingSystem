@@ -10,7 +10,7 @@ public class SearchObject {
 
     private LocalDateTime startTime;
 
-    private static class Builder{
+    public static class Builder{
         SearchObject searchObject;
         public Builder(){
             searchObject = new SearchObject();
